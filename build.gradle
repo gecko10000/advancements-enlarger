@@ -1,11 +1,11 @@
 plugins {
-    id 'fabric-loom' version "1.0-SNAPSHOT"
+    id 'fabric-loom' version "1.6-SNAPSHOT"
     id 'maven-publish'
     id 'org.cadixdev.licenser' version '0.6.1'
 }
 
-sourceCompatibility = JavaVersion.VERSION_17
-targetCompatibility = JavaVersion.VERSION_17
+sourceCompatibility = JavaVersion.VERSION_21
+targetCompatibility = JavaVersion.VERSION_21
 
 archivesBaseName = project.archives_base_name
 version = project.mod_version
@@ -45,7 +45,7 @@ processResources {
 
 tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"
-    options.release.set(17)
+    options.release.set(21)
 }
 
 jar {
